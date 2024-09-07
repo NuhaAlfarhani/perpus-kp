@@ -9,6 +9,6 @@ class BukuModel extends Model
 {
     use HasFactory;
     protected $table        = "buku";
-    protected $primaryKey   = "id_buku";
-    protected $fillable     = ['id_buku','kode_buku','judul','pengarang','kategori'];
+    protected $primaryKey   = "kode_buku";
+    protected $fillable     = ['kode_buku','judul','pengarang','kategori'];
 }

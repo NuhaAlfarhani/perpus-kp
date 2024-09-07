@@ -10,5 +10,5 @@ class AnggotaModel extends Model
     use HasFactory;
     protected $table        = "anggota";
     protected $primaryKey   = "id_anggota";
-    protected $fillable     = ['id_anggota','nim','nama_anggota','prodi','hp'];
+    protected $fillable     = ['id_anggota','nama_anggota','kelas'];
 }
