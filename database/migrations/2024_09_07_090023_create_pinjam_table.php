@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('pinjam', function (Blueprint $table) {
             $table->id('id_pinjam');
             $table->uuid('id_petugas');
-            $table->uuid('id_anggota');
+            $table->unsignedBigInteger('nis');
             $table->uuid('kode_buku');
             $table->date('tanggal');
             $table->timestamps();
 
             $table->foreign('id_petugas')->references('id_petugas')->on('petugas')->onDelete('cascade');
-            $table->foreign('id_anggota')->references('id_anggota')->on('anggota')->onDelete('cascade');
+            $table->foreign('nis')->references('nis')->on('anggota')->onDelete('cascade');
             $table->foreign('kode_buku')->references('kode_buku')->on('buku')->onDelete('cascade');
         });
     }

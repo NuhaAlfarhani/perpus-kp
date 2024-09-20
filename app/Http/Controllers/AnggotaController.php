@@ -12,7 +12,7 @@ class AnggotaController extends Controller
     //method untuk tampil data anggota
     public function anggotatampil()
     {
-        $dataanggota = AnggotaModel::orderby('id_anggota', 'ASC')
+        $dataanggota = AnggotaModel::orderby('nis', 'ASC')
         ->paginate(5);
 
         return view('halaman/view_anggota',['anggota'=>$dataanggota]);
@@ -22,48 +22,44 @@ class AnggotaController extends Controller
     public function anggotatambah(Request $request)
     {
         $this->validate($request, [
-            'nim' => 'required',
+            'nis' => 'required',
             'nama_anggota' => 'required',
-            'prodi' => 'required',
-            'hp' => 'required'
+            'kelas' => 'required'
         ]);
 
         AnggotaModel::create([
-            'nim' => $request->nim,
+            'nis' => $request->nis,
             'nama_anggota' => $request->nama_anggota,
-            'prodi' => $request->prodi,
-            'hp' => $request->hp
+            'kelas' => $request->kelas
         ]);
 
         return redirect('/anggota/tampil');
     }
 
      //method untuk hapus data anggota
-     public function anggotahapus($id_anggota)
+     public function anggotahapus($nis)
      {
-         $dataanggota=AnggotaModel::find($id_anggota);
+         $dataanggota=AnggotaModel::find($nis);
          $dataanggota->delete();
  
          return redirect()->back();
      }
 
      //method untuk edit data anggota
-    public function anggotaedit($id_anggota, Request $request)
+    public function anggotaedit($nis, Request $request)
     {
         $this->validate($request, [
-            'nim' => 'required',
+            'nis' => 'required',
             'nama_anggota' => 'required',
-            'prodi' => 'required',
-            'hp' => 'required'
+            'kelas' => 'required'
         ]);
 
-        $id_anggota = AnggotaModel::find($id_anggota);
-        $id_anggota->nim   = $request->nim;
-        $id_anggota->nama_anggota      = $request->nama_anggota;
-        $id_anggota->prodi  = $request->prodi;
-        $id_anggota->hp   = $request->hp;
+        $nis = AnggotaModel::find($nis);
+        $nis->nis = $request->nis;
+        $nis->nama_anggota = $request->nama_anggota;
+        $nis->kelas = $request->kelas;
 
-        $id_anggota->save();
+        $nis->save();
 
         return redirect()->back();
     }

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('anggota', function (Blueprint $table) {
-            $table->uuid('id_anggota')->unique()->primary();
+            $table->id('nis');
             $table->string('nama_anggota');
             $table->string('kelas');
             $table->timestamps();
