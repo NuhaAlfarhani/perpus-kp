@@ -3,7 +3,7 @@
 
 @section('isihalaman')
 <h3>
-    <center>Daftar Anggota Perpustakaan Institut Teknologi Telkom Surabaya</center>
+    <center>Daftar Anggota Perpustakaan Pondok Pesantren Tebu Ireng</center>
 </h3>
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAnggotaTambah">

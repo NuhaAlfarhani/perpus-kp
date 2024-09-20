@@ -9,12 +9,12 @@
         Perpustakaan Perguruan Tinggi merupakan unit kerja pelaksana teknis (UPT) Perguruan Tinggi yang bersama-sama dengan unit lain turut melaksanakan Tri Dharma Perguruan Tinggi, yaitu: pendidikan, penelitian, dan pengabdian kepada masyarakat dengan cara memilah, menghimpun, mengolah, merawat, serta menyebarluaskan sumber informasi kepada lembaga induknya pada khususnya dan sivitas akademika pada umumnya. Kelima tugas tersebut dilaksanakan dengan tata cara administrasi dan organisasi yang berlaku bagi penyelenggaraan sebuah perpustakaan.
     </p>
 
-    <h4>Perpustakaan ITTS</h4>
+    <h4>Perpustakaan Pondok Pesantren Tebu Ireng</h4>
     <p style="text-align: justify; text-indent:1.27cm">
-        UPT Perpustakaan Institut Teknologi Telkom Surabaya sebagai salah satu perpustakaan perguruan tinggi swasta di Indonesia selama ini juga telah melaksanakan kelima tugas tersebut dalam kegiatan di perpustakaannya untuk mendukung terwujudnya Tri Dharma Perguruan Tinggi. Berbagai upaya dilakukan oleh Perpustakaan kampus sendiri berada ditempat yang cukup representative, mudah diakses baik oleh mahasiswa ataupun kalangan civitas akademika ITTS. Disamping itu juga memiliki ribuan koleksi mulai dari Buku, Jurnal, Majalah, Dokumen Penelitian dan berbagai sumber referensi lain guna menunjang proses pembelajaran di ITTS.
+    Perpustakaan Tebuireng berdiri pada tahun 1936, berkat inisiatif KH. Wahid Hasyim bersama Kiai Muhammad Ilyas. Awalnya, dua tokoh yang sama-sama pernah menjadi Menteri Agama itu, mendirikan IkatanPelajar Islam (IPI) yang berkompeten di bidang pengembangan intelektual dan pengabdian sosial kemasyarakatan.
     </p>
     <p style="text-align: justify; text-indent:1.27cm">
-        Perhatian pimpinan Yayasan dan Universitas dalam pengembangan dan peningkatan layanan Perpustakaan semakin membaik 5 tahun belakangan ini, hal ini ditunjukan dengan koleksi bahan perpustakaan yang meningkat cukup baik ditiap tahunnya yaitu dengan rata-rata 5,18 % pertahun. UPT Perpustakaan Institut Teknologi Telkom Surabaya sampai 10 Oktober 2018 memiliki 24.421 Judul koleksi dengan jumlah total 38.668 eksemplar
+    Untuk mendukung kegiatan IPI, keduanya berinisiatif mendirikan taman bacaan (perpustakaan), yang saat itu menyediakan sekitar 500 judul buku. Dalam perkembangan selanjutnya, perpustakaan tersebut juga berlangganan Koran dan majalah, seperti Panji Islam, Dewan Islam, Berita Nahdlatoel Oelama’, Islam Bergerak, Adil, Nurul Iman, Penjebar Semangat, Pandji Poestaka, Pudjangga Baru, Shout Al Hijaz, Al Munawwarah, dan lain sebagainya. Langkah ini merupakan terobosan besar yang saat itu belum pernah dilakukan oleh pesantren manapun di Indonesia.
     </p>
 
     <h4>Perpustakaan Menurut UU NO 43. THN. 2007</h4>
