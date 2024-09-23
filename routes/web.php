@@ -23,19 +23,17 @@ use App\Http\Controllers\PinjamController;
 Route::get('/', function () {return view('welcome');});
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
-Route::post('/login', [LoginController::class, 'loginPost'])->name('login');
+Route::post('/login', [LoginController::class, 'loginPost'])->name('loginPost');
 
 Route::group(['middleware'=>'auth'], function(){
     //Route untuk Home
-    Route::get('/home', function () {
-        return view('home');
-    });
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     // Route untuk Data Buku
     Route::get('/buku/tampil', [BukuController::class, 'bukutampil'])->name('buku');
     Route::post('/buku/tambah', [BukuController::class, 'bukutambah']);
-    Route::get('/buku/hapus/{id_buku}', [BukuController::class, 'bukuhapus']);
-    Route::put('/buku/edit/{id_buku}', [BukuController::class, 'bukuedit']);
+    Route::get('/buku/hapus/{kode_buku}', [BukuController::class, 'bukuhapus']);
+    Route::put('/buku/edit/{kode_buku}', [BukuController::class, 'bukuedit']);
     Route::get('/download-buku-pdf', [BukuController::class, 'downloadpdf'])->name('halaman.view_buku-pdf');
 
     // Route untuk Data Anggota
@@ -58,6 +56,4 @@ Route::group(['middleware'=>'auth'], function(){
     Route::put('/pinjam/edit/{id_pinjam}', [PinjamController::class, 'pinjamedit']);
 
     Route::delete('/logout', [LoginController::class, 'logout'])->name('logout');
-
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });

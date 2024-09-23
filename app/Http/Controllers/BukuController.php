@@ -41,16 +41,16 @@ class BukuController extends Controller
     }
 
      //method untuk hapus data buku
-     public function bukuhapus($id_buku)
+     public function bukuhapus($kode_buku)
      {
-         $databuku=BukuModel::find($id_buku);
+         $databuku=BukuModel::find($kode_buku);
          $databuku->delete();
  
          return redirect()->back();
      }
 
      //method untuk edit data buku
-    public function bukuedit($id_buku, Request $request)
+    public function bukuedit($kode_buku, Request $request)
     {
         $this->validate($request, [
             'kode_buku' => 'required',
@@ -59,13 +59,13 @@ class BukuController extends Controller
             'kategori' => 'required'
         ]);
 
-        $id_buku = BukuModel::find($id_buku);
-        $id_buku->kode_buku   = $request->kode_buku;
-        $id_buku->judul      = $request->judul;
-        $id_buku->pengarang  = $request->pengarang;
-        $id_buku->kategori   = $request->kategori;
+        $kode_buku = BukuModel::find($kode_buku);
+        $kode_buku->kode_buku   = $request->kode_buku;
+        $kode_buku->judul      = $request->judul;
+        $kode_buku->pengarang  = $request->pengarang;
+        $kode_buku->kategori   = $request->kategori;
 
-        $id_buku->save();
+        $kode_buku->save();
 
         return redirect()->back();
     }
