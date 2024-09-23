@@ -31,7 +31,7 @@ class PetugasController extends Controller
             'hp' => $request->hp
         ]);
 
-        return redirect('/petugas/tampil');
+        return back();
     }
 
      //method untuk hapus data petugas

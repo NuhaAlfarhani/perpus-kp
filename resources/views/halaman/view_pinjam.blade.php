@@ -18,6 +18,7 @@
                 <td align="center">Nama Petugas</td>
                 <td align="center">Nama Anggota</td>
                 <td align="center">Judul Buku</td>
+                <td align="center">Tanggal Pinjam</td>
                 <td align="center">Aksi</td>
             </tr>
         </thead>
@@ -30,6 +31,7 @@
                     <td align="center">{{$p->petugas->nama_petugas}}</td>
                     <td align="center">{{$p->anggota->nama_anggota}}</td>
                     <td align="center">{{$p->buku->judul}}</td>
+                    <td align="center">{{$p->created_at}}</td>
                     <td align="center">
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalPinjamEdit{{$p->id_pinjam}}"> 
                             Edit
@@ -73,12 +75,12 @@
                                             <div class="form-group row">
                                                 <label for="anggota" class="col-sm-4 col-form-label">Nama Anggota</label>
                                                 <div class="col-sm-8">
-                                                    <select type="text" class="form-control" id="id_anggota" name="id_anggota">
+                                                    <select type="text" class="form-control" id="nis" name="nis">
                                                         @foreach ($anggota as $a)
-                                                            @if ($a->id_anggota == $p->id_anggota)
-                                                                <option value="{{ $a->id_anggota }}" selected>{{ $a->nama_anggota }}</option>
+                                                            @if ($a->nis == $p->nis)
+                                                                <option value="{{ $a->nis }}" selected>{{ $a->nama_anggota }}</option>
                                                             @else
-                                                                <option value="{{ $a->id_anggota }}">{{ $a->nama_anggota }}</option>
+                                                                <option value="{{ $a->nis }}">{{ $a->nama_anggota }}</option>
                                                             @endif
                                                         @endforeach
                                                     </select>
@@ -89,12 +91,12 @@
                                             <div class="form-group row">
                                                 <label for="judul" class="col-sm-4 col-form-label">Judul Buku</label>
                                                 <div class="col-sm-8">
-                                                    <select type="text" class="form-control" id="id_buku" name="id_buku">
+                                                    <select type="text" class="form-control" id="kode_buku" name="kode_buku">
                                                         @foreach ($buku as $bk)
-                                                            @if ($bk->id_buku == $p->id_buku)
-                                                                <option value="{{ $bk->id_buku }}" selected>{{ $bk->judul }}</option>
+                                                            @if ($bk->kode_buku == $p->kode_buku)
+                                                                <option value="{{ $bk->kode_buku }}" selected>{{ $bk->judul }}</option>
                                                             @else
-                                                                <option value="{{ $bk->id_buku }}">{{ $bk->judul }}</option>
+                                                                <option value="{{ $bk->kode_buku }}">{{ $bk->judul }}</option>
                                                             @endif
                                                         @endforeach
                                                     </select>
@@ -153,12 +155,12 @@
 
                         <p>
                         <div class="form-group row">
-                            <label for="id_anggota" class="col-sm-4 col-form-label">Nama Anggota</label>
+                            <label for="nis" class="col-sm-4 col-form-label">Nama Anggota</label>
                             <div class="col-sm-8">
-                                <select type="text" class="form-control" id="id_anggota" name="id_anggota" placeholder="Pilih Nama Anggota">
+                                <select type="text" class="form-control" id="nis" name="nis" placeholder="Pilih Nama Anggota">
                                     <option></option>
                                     @foreach($anggota as $a)
-                                        <option value="{{ $a->id_anggota }}">{{ $a->nama_anggota }}</option>
+                                        <option value="{{ $a->nis }}">{{ $a->nama_anggota }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -166,12 +168,12 @@
 
                         <p>
                         <div class="form-group row">
-                            <label for="id_buku" class="col-sm-4 col-form-label">Judul Buku</label>
+                            <label for="kode_buku" class="col-sm-4 col-form-label">Judul Buku</label>
                             <div class="col-sm-8">
-                                <select type="text" class="form-control" id="id_buku" name="id_buku" placeholder="Pilih Judul Buku">
+                                <select type="text" class="form-control" id="kode_buku" name="kode_buku" placeholder="Pilih Judul Buku">
                                     <option></option>
                                     @foreach($buku as $bk)
-                                        <option value="{{ $bk->id_buku }}">{{ $bk->judul }}</option>
+                                        <option value="{{ $bk->kode_buku }}">{{ $bk->judul }}</option>
                                     @endforeach
                                 </select>
                             </div>

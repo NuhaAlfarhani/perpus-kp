@@ -18,7 +18,6 @@ return new class extends Migration
             $table->unsignedBigInteger('id_petugas');
             $table->unsignedBigInteger('nis');
             $table->uuid('kode_buku');
-            $table->date('tanggal');
             $table->timestamps();
 
             $table->foreign('id_petugas')->references('id_petugas')->on('petugas')->onDelete('cascade');

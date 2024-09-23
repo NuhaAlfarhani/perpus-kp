@@ -60,14 +60,13 @@ class BukuController extends Controller
         ]);
 
         $kode_buku = BukuModel::find($kode_buku);
-        $kode_buku->kode_buku   = $request->kode_buku;
         $kode_buku->judul      = $request->judul;
         $kode_buku->pengarang  = $request->pengarang;
         $kode_buku->kategori   = $request->kategori;
 
         $kode_buku->save();
 
-        return redirect()->back();
+        return redirect('/buku');
     }
 
     public function downloadpdf()

@@ -38,14 +38,14 @@ class PinjamController extends Controller
     {
         $this->validate($request, [
             'id_petugas' => 'required',
-            'id_anggota' => 'required',
-            'id_buku' => 'required'
+            'nis' => 'required',
+            'kode_buku' => 'required'
         ]);
 
         PinjamModel::create([
             'id_petugas' => $request->id_petugas,
-            'id_anggota' => $request->id_anggota,
-            'id_buku' => $request->id_buku
+            'nis' => $request->nis,
+            'kode_buku' => $request->kode_buku
         ]);
         return redirect('/pinjam/tampil');
     }
@@ -64,14 +64,14 @@ class PinjamController extends Controller
     {
         $this->validate($request, [
             'id_petugas' => 'required',
-            'id_anggota' => 'required',
-            'id_buku' => 'required'
+            'nis' => 'required',
+            'kode_buku' => 'required'
         ]);
 
         $id_pinjam = PinjamModel::find($id_pinjam);
         $id_pinjam->id_petugas    = $request->id_petugas;
-        $id_pinjam->id_anggota      = $request->id_anggota;
-        $id_pinjam->id_buku      = $request->id_buku;
+        $id_pinjam->nis      = $request->nis;
+        $id_pinjam->kode_buku      = $request->kode_buku;
 
         $id_pinjam->save();
 
