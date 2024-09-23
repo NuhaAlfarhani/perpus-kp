@@ -2,22 +2,10 @@
     <!--awal FOOTER-->
     <div class="col-md-12">
         <div class="row" style="background:rgba(63, 67, 102, 0.562)">
-            <div class="col-md-9">
-                <h3>Visi</h3>
-                <p>Terwujudnya Indonesia Cerdas Melalui Gemar Membaca Dengan Memberdayakan Perpustakaan
-
-                <p>
-                <h3>Misi</h3>
-                <ul>
-                    <li>Terwujudnya layanan prima</li>
-                    <li>Terwujudnya perpustakaan sebagai pelestari khazanah budaya bangsa</li>
-                    <li>Terwujudnya perpustakaan sesuai standar nasional perpustakaan</li>
-                </ul>                     
-            </div>
             <div class="col-md-3">
-                Copyright &copy; 2023. All right reserves
+                Copyright &copy; 2024. All right reserves
                 <p>
-                Developed by <a style="color: whitesmoke;" href="https://www.instagram.com/ittelkomsurabaya/">Telkom University Surabaya</a>
+                Developed by <a style="color: whitesmoke;" href="https://www.instagram.com/telkomuniversity_surabaya/">Telkom University Surabaya</a>
             </div>
         </div>
     </div>
