@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('petugas', function (Blueprint $table) {
-            $table->uuid('id_petugas')->unique()->primary();
+            $table->id('id_petugas');
             $table->string('nama_petugas');
             $table->string('hp');
             $table->timestamps();

@@ -26,9 +26,9 @@
         @foreach ($anggota as $index=>$a)
         <tr>
             <td align="center" scope="row">{{ $index + $anggota->firstItem() }}</td>
-            <td>{{$a->nis}}</td>
-            <td>{{$a->nama_anggota}}</td>
-            <td>{{$a->kelas}}</td>
+            <td align="center">{{$a->nis}}</td>
+            <td align="center">{{$a->nama_anggota}}</td>
+            <td align="center">{{$a->kelas}}</td>
             <td align="center">
 
                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalAnggotaEdit{{$a->nis}}">

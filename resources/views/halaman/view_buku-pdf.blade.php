@@ -31,12 +31,12 @@
             <?php $no = 1; ?>
             @foreach ($data as $index=>$bk)
             <tr>
-                <td>{{$no}}</td>
-                <td>{{$bk->id_buku}}</td>
-                <td>{{$bk->kode_buku}}</td>
-                <td>{{$bk->judul}}</td> 
-                <td>{{$bk->pengarang}}</td>  
-                <td>{{$bk->kategori}}</td>
+                <td align="center">{{$no}}</td>
+                <td align="center">{{$bk->id_buku}}</td>
+                <td align="center">{{$bk->kode_buku}}</td>
+                <td align="center">{{$bk->judul}}</td> 
+                <td align="center">{{$bk->pengarang}}</td>  
+                <td align="center">{{$bk->kategori}}</td>
             </tr>
             <?php $no++; ?>
             @endforeach

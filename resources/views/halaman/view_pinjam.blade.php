@@ -27,9 +27,9 @@
                 <tr>
                     <td align="center" scope="row">{{ $index + $pinjam->firstItem() }}</td>
                     <td align="center">{{$p->id_pinjam}}</td>
-                    <td>{{$p->petugas->nama_petugas}}</td>
-                    <td>{{$p->anggota->nama_anggota}}</td>
-                    <td>{{$p->buku->judul}}</td>
+                    <td align="center">{{$p->petugas->nama_petugas}}</td>
+                    <td align="center">{{$p->anggota->nama_anggota}}</td>
+                    <td align="center">{{$p->buku->judul}}</td>
                     <td align="center">
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalPinjamEdit{{$p->id_pinjam}}"> 
                             Edit

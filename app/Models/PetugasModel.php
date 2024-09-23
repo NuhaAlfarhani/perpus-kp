@@ -10,5 +10,5 @@ class PetugasModel extends Model
     use HasFactory;
     protected $table        = "petugas";
     protected $primaryKey   = "id_petugas";
-    protected $fillable     = ['id_petugas','nama_petugas','hp'];
+    protected $fillable     = ['nama_petugas','hp'];
 }

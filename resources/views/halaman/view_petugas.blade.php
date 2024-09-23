@@ -24,9 +24,9 @@
             @foreach ($petugas as $index=>$p)
                 <tr>
                     <td align="center" scope="row">{{ $index + $petugas->firstItem() }}</td>
-                    <td>{{$p->id_petugas}}</td>
-                    <td>{{$p->nama_petugas}}</td>
-                    <td>{{$p->hp}}</td>
+                    <td align="center">{{$p->id_petugas}}</td>
+                    <td align="center">{{$p->nama_petugas}}</td>
+                    <td align="center">{{$p->hp}}</td>
                     <td align="center">
                         
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalPetugasEdit{{$p->id_petugas}}"> 
