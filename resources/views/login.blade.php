@@ -3,12 +3,12 @@
 @section('loginForm')
 
 <!-- Pills content -->
-<div style="width: 75%; position:relative">
-  <div class="row justify-content-center mt-5" style="margin-left: -100%; margin-right:-100%">
-    <div class="col-lg-4">
+<div class="container" style="max-width: 600px; margin-top: 50px;">
+  <div class="row justify-content-center">
+    <div class="col-lg-12">
       <div class="card">
         <div class="card-header" style="background-color:rgba(63, 67, 102, 0.562)">
-          <h1 class="card-title" style="text-align: center">Login</h1>
+          <h1 class="card-title text-center">Login</h1>
         </div>
         <div class="card-body" style="background-color: #D0C9C0">
           @if(Session::has('error'))

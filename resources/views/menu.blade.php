@@ -1,6 +1,6 @@
 <!--awal MENU NAVBAR-->
-<div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div style="background:rgba(63, 67, 102, 0.562);padding:auto;">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -27,7 +27,7 @@
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-light" type="submit">Log Out</button>
+                        <button class="btn" type="submit">Log Out</button>
                     </form>
                 </li>
             </ul>

@@ -1,11 +1,9 @@
 <p>
     <!--awal FOOTER-->
     <div class="col-md-12">
-        <div class="row" style="background:rgba(63, 67, 102, 0.562)">
-            <div class="col-md-3">
-                Copyright &copy; 2024. All right reserves
-                <p>
-                Developed by <a style="color: whitesmoke;" href="https://www.instagram.com/telkomuniversity_surabaya/">Telkom University Surabaya</a>
+        <div class="row" style="background:rgba(63, 67, 102, 0.562); padding:auto;">
+            <div style="padding: auto; padding-top: 1rem; padding-bottom: 1rem; padding-left:1rem">
+                Copyright &copy; 2024. All right reserves | Developed by <a style="color: whitesmoke;" href="https://www.instagram.com/telkomuniversity_surabaya/">Telkom University Surabaya</a>
             </div>
         </div>
     </div>
