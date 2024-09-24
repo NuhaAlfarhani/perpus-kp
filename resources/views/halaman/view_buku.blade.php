@@ -4,12 +4,29 @@
 @section('isihalaman')
     <h3><center>Daftar Buku Perpustakaan Pondok Pesantren Tebu Ireng</center></h3>
     
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBukuTambah"> 
-        Tambah Data Buku 
-    </button>
-        <a href="{{ route('halaman.view_buku-pdf') }}" target="_blank">
-            <button class="btn btn-success">Download PDF</button>
-        </a>
+    <div class="d-flex justify-content-between mb-3">
+        <div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBukuTambah"> 
+                Tambah Data Buku 
+            </button>
+
+            <a href="{{ route('halaman.view_buku-pdf') }}" target="_blank">
+                <button class="btn btn-success">Download PDF</button>
+            </a>
+        </div>
+
+        <div class="search">
+            <form action="{{ route('caribuku') }}" method="POST" class="form-inline">
+                <div class="input-group">
+                    <input type="text" name="cari" class="form-control" placeholder="Cari Buku..." aria-label="Cari" aria-describedby="button-search">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit" id="button-search">Cari</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
   <p>
     <table class="table table-bordered table-striped">
         <thead>

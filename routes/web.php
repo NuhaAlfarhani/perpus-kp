@@ -31,6 +31,7 @@ Route::group(['middleware'=>'auth'], function(){
 
     // Route untuk Data Buku
     Route::get('/buku/tampil', [BukuController::class, 'bukutampil'])->name('buku');
+    Route::post('/buku/cari', [BukuController::class, 'bukucari'])->name('caribuku');
     Route::post('/buku/tambah', [BukuController::class, 'bukutambah']);
     Route::get('/buku/hapus/{kode_buku}', [BukuController::class, 'bukuhapus']);
     Route::put('/buku/edit/{kode_buku}', [BukuController::class, 'bukuedit']);
