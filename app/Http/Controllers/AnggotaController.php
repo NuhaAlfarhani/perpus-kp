@@ -13,7 +13,7 @@ class AnggotaController extends Controller
     public function anggotatampil()
     {
         $dataanggota = AnggotaModel::orderby('nis', 'ASC')
-        ->paginate(5);
+        ->paginate(10);
 
         return view('halaman/view_anggota',['anggota'=>$dataanggota]);
     }

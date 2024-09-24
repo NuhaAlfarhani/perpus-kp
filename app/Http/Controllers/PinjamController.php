@@ -24,7 +24,7 @@ class PinjamController extends Controller
     public function pinjamtampil()
     {
         $datapinjam = PinjamModel::orderby('id_pinjam', 'ASC')
-        ->paginate(5);
+        ->paginate(10);
 
         $datapetugas    = PetugasModel::all();
         $dataanggota      = AnggotaModel::all();

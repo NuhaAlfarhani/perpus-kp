@@ -13,7 +13,7 @@ class PetugasController extends Controller
     public function petugastampil()
     {
         $datapetugas = PetugasModel::orderby('id_petugas', 'ASC')
-        ->paginate(5);
+        ->paginate(10);
 
         return view('halaman/view_petugas',['petugas'=>$datapetugas]);
     }

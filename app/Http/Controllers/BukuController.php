@@ -15,9 +15,20 @@ class BukuController extends Controller
     public function bukutampil()
     {
         $databuku = BukuModel::orderby('kode_buku', 'ASC')
-        ->paginate(5);
+        ->paginate(10);
 
         return view('halaman/view_buku',['buku'=>$databuku]);
+    }
+
+    // search data buku
+    public function bukucari(Request $request)
+    {
+        dd($request->all());
+        $cari = $request->input('cari');
+        $databuku = BukuModel::where('judul', 'like', "%".$cari."%")
+        ->orWhere('kode_buku', 'like', "%".$cari."%");
+
+        return view('halaman/view_buku',compact('databuku'));
     }
 
     //method untuk tambah data buku
