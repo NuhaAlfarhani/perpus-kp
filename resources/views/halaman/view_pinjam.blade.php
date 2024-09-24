@@ -36,83 +36,6 @@
                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalPinjamEdit{{$p->id_pinjam}}"> 
                             Edit
                         </button>
-
-                        <div class="modal fade" id="modalPinjamEdit{{$p->id_pinjam}}" tabindex="-1" role="dialog" aria-labelledby="modalPinjamEditLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modalPinjamEditLabel">Form Edit Data Peminjaman</h5>
-                                    </div>
-                                    <div class="modal-body">
-
-                                        <form name="formpinjamedit" id="formpinjamedit" action="/pinjam/edit/{{ $p->id_pinjam}} " method="post" enctype="multipart/form-data">
-                                            @csrf
-                                            {{ method_field('PUT') }}
-                                            <div class="form-group row">
-                                                <label for="id_pinjam" class="col-sm-4 col-form-label">ID Pinjam</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" id="id_pinjam" name="id_pinjam" value="{{ $p->id_pinjam}}" readonly>
-                                                </div>
-                                            </div>
-
-                                            <p>
-                                            <div class="form-group row">
-                                                <label for="petugas" class="col-sm-4 col-form-label">Nama Petugas</label>
-                                                <div class="col-sm-8">
-                                                    <select type="text" class="form-control" id="id_petugas" name="id_petugas">
-                                                        @foreach ($petugas as $pt)
-                                                            @if ($pt->id_petugas == $p->id_petugas)
-                                                                <option value="{{ $pt->id_petugas }}" selected>{{ $pt->nama_petugas }}</option>
-                                                            @else
-                                                                <option value="{{ $pt->id_petugas }}">{{ $pt->nama_petugas }}</option>
-                                                            @endif
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <p>
-                                            <div class="form-group row">
-                                                <label for="anggota" class="col-sm-4 col-form-label">Nama Anggota</label>
-                                                <div class="col-sm-8">
-                                                    <select type="text" class="form-control" id="nis" name="nis">
-                                                        @foreach ($anggota as $a)
-                                                            @if ($a->nis == $p->nis)
-                                                                <option value="{{ $a->nis }}" selected>{{ $a->nama_anggota }}</option>
-                                                            @else
-                                                                <option value="{{ $a->nis }}">{{ $a->nama_anggota }}</option>
-                                                            @endif
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <p>
-                                            <div class="form-group row">
-                                                <label for="judul" class="col-sm-4 col-form-label">Judul Buku</label>
-                                                <div class="col-sm-8">
-                                                    <select type="text" class="form-control" id="kode_buku" name="kode_buku">
-                                                        @foreach ($buku as $bk)
-                                                            @if ($bk->kode_buku == $p->kode_buku)
-                                                                <option value="{{ $bk->kode_buku }}" selected>{{ $bk->judul }}</option>
-                                                            @else
-                                                                <option value="{{ $bk->kode_buku }}">{{ $bk->judul }}</option>
-                                                            @endif
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <p>
-                                            <div class="modal-footer">
-                                                <button type="button" name="tutup" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                                <button type="submit" name="pinjamtambah" class="btn btn-success">Edit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         |
                         <a href="/pinjam/hapus/{{$p->id_pinjam}}" onclick="return confirm('Yakin mau dihapus?')">
                             <button class="btn-danger">
@@ -121,6 +44,83 @@
                         </a>
                     </td>
                 </tr>
+
+                <div class="modal fade" id="modalPinjamEdit{{$p->id_pinjam}}" tabindex="-1" role="dialog" aria-labelledby="modalPinjamEditLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalPinjamEditLabel">Form Edit Data Peminjaman</h5>
+                            </div>
+                            <div class="modal-body">
+
+                                <form name="formpinjamedit" id="formpinjamedit" action="/pinjam/edit/{{ $p->id_pinjam}} " method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    {{ method_field('PUT') }}
+                                    <div class="form-group row">
+                                        <label for="id_pinjam" class="col-sm-4 col-form-label">ID Pinjam</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="id_pinjam" name="id_pinjam" value="{{ $p->id_pinjam}}" readonly>
+                                        </div>
+                                    </div>
+
+                                    <p>
+                                    <div class="form-group row">
+                                        <label for="petugas" class="col-sm-4 col-form-label">Nama Petugas</label>
+                                        <div class="col-sm-8">
+                                            <select type="text" class="form-control" id="id_petugas" name="id_petugas">
+                                                @foreach ($petugas as $pt)
+                                                    @if ($pt->id_petugas == $p->id_petugas)
+                                                        <option value="{{ $pt->id_petugas }}" selected>{{ $pt->nama_petugas }}</option>
+                                                    @else
+                                                        <option value="{{ $pt->id_petugas }}">{{ $pt->nama_petugas }}</option>
+                                                    @endif
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <p>
+                                    <div class="form-group row">
+                                        <label for="anggota" class="col-sm-4 col-form-label">Nama Anggota</label>
+                                        <div class="col-sm-8">
+                                            <select type="text" class="form-control" id="nis" name="nis">
+                                                @foreach ($anggota as $a)
+                                                    @if ($a->nis == $p->nis)
+                                                        <option value="{{ $a->nis }}" selected>{{ $a->nama_anggota }}</option>
+                                                    @else
+                                                        <option value="{{ $a->nis }}">{{ $a->nama_anggota }}</option>
+                                                    @endif
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <p>
+                                    <div class="form-group row">
+                                        <label for="judul" class="col-sm-4 col-form-label">Judul Buku</label>
+                                        <div class="col-sm-8">
+                                            <select type="text" class="form-control" id="kode_buku" name="kode_buku">
+                                                @foreach ($buku as $bk)
+                                                    @if ($bk->kode_buku == $p->kode_buku)
+                                                        <option value="{{ $bk->kode_buku }}" selected>{{ $bk->judul }}</option>
+                                                    @else
+                                                        <option value="{{ $bk->kode_buku }}">{{ $bk->judul }}</option>
+                                                    @endif
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <p>
+                                    <div class="modal-footer">
+                                        <button type="button" name="tutup" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                        <button type="submit" name="pinjamtambah" class="btn btn-success">Edit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             @endforeach
         </tbody>
     </table>
