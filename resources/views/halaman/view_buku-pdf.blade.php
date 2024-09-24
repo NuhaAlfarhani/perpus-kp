@@ -20,7 +20,7 @@
             <thead>
                 <tr>
                     <td align="center">No</td>
-                    <td align="center">ID Buku</td>
+                    
                     <td align="center">Kode Buku</td>
                     <td align="center">Judul Buku</td>
                     <td align="center">Pengarang</td>
@@ -32,7 +32,7 @@
             @foreach ($data as $index=>$bk)
             <tr>
                 <td align="center">{{$no}}</td>
-                <td align="center">{{$bk->id_buku}}</td>
+                
                 <td align="center">{{$bk->kode_buku}}</td>
                 <td align="center">{{$bk->judul}}</td> 
                 <td align="center">{{$bk->pengarang}}</td>  

@@ -63,10 +63,10 @@ class BukuController extends Controller
         $kode_buku->judul      = $request->judul;
         $kode_buku->pengarang  = $request->pengarang;
         $kode_buku->kategori   = $request->kategori;
-
+        
         $kode_buku->save();
 
-        return redirect('/buku');
+        return redirect()->back();
     }
 
     public function downloadpdf()
